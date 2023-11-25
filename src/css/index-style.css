@@ -1,0 +1,383 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Varela Round", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 25% 1fr 10%;
+  grid-template-areas: "navig" "header" "main" "footer";
+}
+body nav {
+  grid-area: navig;
+  height: 10%;
+  background-image: url("/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+body nav #burger {
+  display: none;
+}
+body nav #burger:checked + label + div {
+  left: 0;
+}
+body nav [for=burger]::before {
+  content: "☰";
+}
+body nav #burger:checked + [for=burger]::before {
+  content: "✕";
+}
+body nav [for=burger] {
+  font-size: 2em;
+  padding-left: 1em;
+  color: #ccff33;
+}
+body nav #burger:checked ~ div > ul > li {
+  transform: translateX(0);
+  transition: 1.5s;
+}
+body nav div {
+  background-color: #ccff33;
+  width: 50%;
+  height: auto;
+  position: fixed;
+  top: 10%;
+  left: -51%;
+  transition: left 0.5s;
+  z-index: 1000;
+  padding: 2em;
+}
+body nav div ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+body nav div ul li {
+  transform: translateX(-50%);
+}
+body nav div ul li a {
+  text-decoration: none;
+  color: #007200;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+body nav div ul li:nth-child(1) {
+  transition: transform 1.5s;
+}
+body nav div ul li:nth-child(2) {
+  transition: transform 1.2s;
+}
+body nav div ul li:nth-child(3) {
+  transition: transform 0.9s;
+}
+body nav div ul li:nth-child(4) {
+  transition: transform 0.6s;
+}
+body nav div ul li:nth-child(5) {
+  transition: transform 0.3s;
+}
+body header {
+  grid-area: header;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2em;
+}
+body header div {
+  width: 24%;
+  height: 47%;
+  background-size: cover;
+  background-position: center;
+}
+body header div:nth-child(1) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg");
+}
+body header div:nth-child(2) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/jason-wang-8J49mtYWu7E-unsplash.jpg");
+}
+body header div:nth-child(3) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/r-architecture-TRCJ-87Yoh0-unsplash.jpg");
+}
+body header div:nth-child(4) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/roberto-nickson-tleCJiDOri0-unsplash.jpg");
+}
+body header div:nth-child(5) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/sidekix-media-t294_ZZP2pg-unsplash.jpg");
+}
+body header div:nth-child(6) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-9M66C_w_ToM-unsplash.jpg");
+}
+body header div:nth-child(7) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-PyeXkOVmG1Y-unsplash.jpg");
+}
+body header div:nth-child(8) {
+  background-image: url("/modul-2/MyProject/src/img/gorisont/toa-heftiba-FV3GConVSss-unsplash.jpg");
+}
+body main {
+  grid-area: main;
+  padding: 2.5em;
+}
+body main h2 {
+  margin: 0.5em 0;
+  color: #004b23;
+}
+body main p {
+  line-height: 1.75em;
+  color: #004b23;
+  margin-bottom: 0.5em;
+}
+body aside {
+  grid-area: aside;
+}
+body aside .slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+body aside .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  animation: slideanim 70s infinite;
+  pointer-events: none;
+}
+body aside .slide:nth-child(1) .slide:nth-child(1) img {
+  animation-delay: 0;
+}
+body aside .slide:nth-child(2) .slide:nth-child(2) img {
+  animation-delay: 10s;
+}
+body aside .slide:nth-child(3),
+body aside .slide:nth-child(3) img {
+  animation-delay: 20s;
+}
+body aside .slide:nth-child(4),
+body aside .slide:nth-child(4) img {
+  animation-delay: 30s;
+}
+body aside .slide:nth-child(5),
+body aside .slide:nth-child(5) img {
+  animation-delay: 40s;
+}
+body aside .slide:nth-child(6),
+body aside .slide:nth-child(6) img {
+  animation-delay: 50s;
+}
+body aside .slide:nth-child(7),
+body aside .slide:nth-child(7) img {
+  animation-delay: 60s;
+}
+body aside .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 70s infinite;
+}
+body aside .text {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  color: #004b23;
+  padding: 20px 30px;
+  background-color: rgba(233, 255, 112, 0.5);
+}
+@keyframes slideanim {
+  12.5% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  25% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  37.5% {
+    opacity: 0;
+  }
+}
+@keyframes zoom {
+  50% {
+    transform: scale(1.5);
+  }
+}
+body footer {
+  grid-area: footer;
+  background-image: url("/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+body footer a {
+  font-size: 3em;
+  color: #ccff33;
+}
+
+@media (max-width: 767px) {
+  body header div span {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 10% 25% 1fr 10%;
+    grid-template-areas: "navig navig" "header header" "main aside" "footer footer";
+  }
+  body nav #burger, body nav [for=burger] {
+    display: none;
+  }
+  body nav div {
+    display: block;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+  body nav div ul {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    font-weight: 600;
+  }
+  body nav div ul li {
+    transition: none !important;
+    transform: none !important;
+  }
+  body nav div ul li a {
+    font-size: 1.3em;
+    color: #ccff33;
+  }
+  body nav div ul li a:hover {
+    color: #38b000;
+  }
+  body header div span {
+    display: none;
+  }
+  body aside .text {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 10% 25% 1fr 10%;
+    grid-template-areas: "navig navig" "header header" "main aside" "footer footer";
+  }
+  body nav #burger, body nav [for=burger] {
+    display: none;
+  }
+  body nav div {
+    display: block;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+  body nav div ul {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 3em;
+    font-weight: 600;
+    padding-left: 2em;
+  }
+  body nav div ul li {
+    transform: none !important;
+    transition: none !important;
+  }
+  body nav div ul li a {
+    font-size: 1.5em;
+    color: #ccff33;
+  }
+  body nav div ul li a:hover {
+    color: #38b000;
+  }
+  body header {
+    flex-wrap: nowrap;
+  }
+  body header div {
+    width: 12%;
+    height: 90%;
+    transition: 1s;
+    cursor: zoom-in;
+  }
+  body header div:hover {
+    box-shadow: 0px 0px 5px 2px #38b000;
+  }
+  body header div:nth-child(1):active {
+    transform: scale(3) translate(122%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(2):active {
+    transform: scale(3) translate(87%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(3):active {
+    transform: scale(3) translate(52%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(4):active {
+    transform: scale(3) translate(17%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(5):active {
+    transform: scale(3) translate(-17%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(6):active {
+    transform: scale(3) translate(-52%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(7):active {
+    transform: scale(3) translate(-87%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body header div:nth-child(8):active {
+    transform: scale(3) translate(-122%, 50%);
+    z-index: 300;
+    box-shadow: none;
+  }
+  body main h2 {
+    font-size: 2em;
+  }
+  body main p {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+  body footer a {
+    color: rgba(204, 255, 51, 0.5);
+  }
+  body footer a:hover {
+    color: #ccff33;
+  }
+}
+
+/*# sourceMappingURL=index-style.css.map */

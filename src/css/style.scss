@@ -1,0 +1,278 @@
+@import "variables.scss";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Varela Round', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 25% 1fr 10%;
+  grid-template-areas:
+    "navig"
+    "header"
+    "main"
+    "footer";
+
+// navbar
+
+  nav {
+    grid-area: navig;
+    height: 10%;
+    background-image: url("/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    #burger {
+      display: none;
+    }
+
+    #burger:checked + label + div {
+      left: 0;
+    }
+
+    [for=burger]::before {
+      content: '\2630';
+    }
+
+    #burger:checked + [for=burger]::before {
+      content: '\2715';
+    }
+      
+    [for=burger] {
+      font-size: 2em;
+      padding-left: 1em; 
+      color: map-get($map: $colors, $key: lime);
+    }
+
+    #burger:checked ~ div > ul > li {
+      transform: translateX(0);
+      transition: 1.5s;
+      }
+
+    div {
+      background-color: map-get($map: $colors, $key: lime);
+      width: 50%;
+      height: auto;
+      position: fixed;
+      top: 10%;
+      left: -51%;
+      transition: left 0.5s;
+      z-index: 1000;
+      padding: 2em;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        li {
+          transform: translateX(-50%);
+        
+          a {
+          text-decoration: none;
+          color: map-get($map: $colors, $key: office-green-2);
+          font-size: 1.2em;
+          font-weight: 600;
+          }
+        }
+      
+        li:nth-child(1) {
+          transition: transform 1.5s;
+        }
+
+        li:nth-child(2) {
+          transition: transform 1.2s;
+        }
+
+        li:nth-child(3) {
+          transition: transform 0.9s;
+        }
+
+        li:nth-child(4) {
+          transition: transform 0.6s;
+        }
+
+        li:nth-child(5) {
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+
+  // header
+  header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2em;
+
+    div {
+        width: 24%;
+        height: 47%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      div:nth-child(1) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg");
+      }
+
+      div:nth-child(2) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/jason-wang-8J49mtYWu7E-unsplash.jpg");
+      }
+  
+      div:nth-child(3) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/r-architecture-TRCJ-87Yoh0-unsplash.jpg");
+      }
+
+      div:nth-child(4) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/roberto-nickson-tleCJiDOri0-unsplash.jpg");
+      }
+
+      div:nth-child(5) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/sidekix-media-t294_ZZP2pg-unsplash.jpg");
+      }
+
+      div:nth-child(6) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-9M66C_w_ToM-unsplash.jpg");
+      }
+
+      div:nth-child(7) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-PyeXkOVmG1Y-unsplash.jpg");
+      }
+
+      div:nth-child(8) {
+        background-image: url("/modul-2/MyProject/src/img/gorisont/toa-heftiba-FV3GConVSss-unsplash.jpg");
+      }
+    }
+
+// main
+
+  main {
+    grid-area: main;
+    padding: 2.5em;
+
+    h2 {
+      margin: 0.5em 0;
+      color: map-get($map: $colors, $key: cal-poly-green);
+    }
+
+    p {
+      line-height: 1.75em;
+      color: map-get($map: $colors, $key: cal-poly-green);
+      margin-bottom: 0.5em;
+    }
+  }
+
+// aside
+
+  aside {
+    grid-area: aside;
+
+    .slideshow {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      animation: slideanim 70s infinite;
+      pointer-events: none;
+  }
+  .slide:nth-child(1)  
+  .slide:nth-child(1) img {
+      animation-delay: 0;
+  }
+  .slide:nth-child(2)
+  .slide:nth-child(2) img {
+      animation-delay: 10s;
+  }
+  .slide:nth-child(3),
+  .slide:nth-child(3) img {
+      animation-delay: 20s;
+  }
+  .slide:nth-child(4),
+  .slide:nth-child(4) img {
+      animation-delay: 30s;
+  }
+  .slide:nth-child(5),
+  .slide:nth-child(5) img {
+      animation-delay: 40s;
+  }
+  .slide:nth-child(6),
+  .slide:nth-child(6) img {
+      animation-delay: 50s;
+  }
+  .slide:nth-child(7),
+  .slide:nth-child(7) img {
+      animation-delay: 60s;
+  }
+  .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: zoom 70s infinite;
+  }
+  .text {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      right: 1em;
+      color: map-get($map: $colors, $key: cal-poly-green);
+      padding: 20px 30px;
+      background-color: map-get($map: $colors, $key: mindaro-opacity);
+  }
+
+  @keyframes slideanim {
+      12.5%{
+          opacity: 1;
+          pointer-events: auto;
+      }
+      25%{
+          opacity: 1;
+          pointer-events: auto;
+      }    
+      37.5%{
+          opacity: 0;
+      }
+  }
+  @keyframes zoom {
+      50%{
+          transform: scale(1.5);
+      }    
+  }
+
+  }
+
+// footer
+
+  footer {
+    grid-area: footer;
+    background-image: url("/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1em;
+   
+    a {
+      font-size: 3em;
+      color: map-get($map: $colors, $key: lime); 
+    }
+  }
+}
+
+@import "media-queries.scss";

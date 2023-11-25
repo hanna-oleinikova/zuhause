@@ -1,0 +1,228 @@
+@media (max-width: $breakpoint_md) {
+
+  body {
+
+
+    header {
+      div {
+        span {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+
+  body {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 10% 25% 1fr 10%;
+    grid-template-areas:
+      "navig navig"
+      "header header"
+      "main aside"
+      "footer footer";
+    
+    nav {
+
+      #burger, [for=burger] {
+        display: none;
+      }
+
+      div {
+        display: block;
+        position:static;
+        padding: 0;
+        background-color: transparent;
+
+        ul {
+          width: 100vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 2em;
+          font-weight: 600;
+
+          li {
+            transition: none !important;
+            transform: none !important;
+
+            a {
+              font-size: 1.3em;
+              color: map-get($map: $colors, $key: lime);
+            }
+  
+            a:hover {
+              color: map-get($map: $colors, $key: kelly-green)
+            }
+
+          }
+
+
+        }
+      }
+    }
+
+    
+
+    header {
+      div {
+        span {
+          display: none;
+        }
+      }
+    }
+
+    aside {
+
+      .text {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint_xl) {
+
+  body {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 10% 25% 1fr 10%;;
+    grid-template-areas:
+      "navig navig"
+      "header header"
+      "main aside"
+      "footer footer";
+
+    nav {
+      #burger, [for=burger] {
+        display: none;
+      }
+
+      div {
+        display: block;
+        position:static;
+        padding: 0;
+        background-color: transparent;
+        
+        ul {
+          width: 100vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          gap: 3em;
+          font-weight: 600;
+          padding-left: 2em;
+
+          li {
+          transform: none !important;
+          transition: none !important;
+
+          a {
+            font-size: 1.5em;
+            color: map-get($map: $colors, $key: lime);
+          }
+
+          a:hover {
+            color: map-get($map: $colors, $key: kelly-green)
+          }
+
+          }
+          
+        }
+      }
+    }
+
+    header {
+      flex-wrap: nowrap;
+      
+      div {
+        width: 12%;
+        height: 90%;
+        transition: 1s;
+        cursor: zoom-in;
+      }
+
+      div:hover {
+        box-shadow: 0px 0px 5px 2px #38b000ff;
+      }
+
+      div:nth-child(1):active {
+        transform: scale(3) translate(122%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(2):active {
+        transform: scale(3) translate(87%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(3):active {
+        transform: scale(3) translate(52%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(4):active {
+        transform: scale(3) translate(17%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(5):active {
+        transform: scale(3) translate(-17%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(6):active {
+        transform: scale(3) translate(-52%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(7):active {
+        transform: scale(3) translate(-87%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+      div:nth-child(8):active {
+        transform: scale(3) translate(-122%,50%);
+        z-index: 300;
+        box-shadow:none;
+      }
+
+    }
+
+    main {
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        margin-bottom: 1em;
+        font-size: 1.2em;
+      }
+    }
+
+    footer {
+
+      a {
+        color: map-get($map: $colors, $key: lime-opacity); 
+      }
+    
+      a:hover {
+        color: map-get($map: $colors, $key: lime);
+      }
+
+    }
+
+  }
+}

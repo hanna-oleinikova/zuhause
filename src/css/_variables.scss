@@ -1,0 +1,24 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$colors: (
+  cal-poly-green: #004b23ff,
+  office-green: #006400ff,
+  office-green-2: #007200ff,
+  office-green-3: #008000ff,
+  kelly-green: #38b000ff,
+  sgbus-green: #70e000ff,
+  spring-bud: #9ef01aff,
+  lime: #ccff33ff,
+  lime-opacity: rgba(204, 255, 51, 0.5),
+  mindaro: #e9ff70ff,
+  mindaro-opacity: rgba(233, 255, 112, 0.5),
+);
+
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1024px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 576px;
