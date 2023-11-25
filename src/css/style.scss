@@ -258,7 +258,7 @@ body {
 // footer
   footer {
     grid-area: footer;
-    background-image: url("/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    background-image: url('#{$nav-img-path}');
     background-size: cover;
     display: flex;
     align-items: center;
