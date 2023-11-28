@@ -1,5 +1,4 @@
 @import "variables.scss";
-$nav-img-path: "/modul-2/MyProject/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg";
 
 body {
   width: 100vw;
@@ -18,7 +17,7 @@ body {
   nav {
     grid-area: navig;
     height: 10%;
-    background-image: url('#{$nav-img-path}');
+    background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -123,35 +122,35 @@ body {
       }
 
       div:nth-child(1) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg");
       }
 
       div:nth-child(2) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/jason-wang-8J49mtYWu7E-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/jason-wang-8J49mtYWu7E-unsplash.jpg");
       }
   
       div:nth-child(3) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/r-architecture-TRCJ-87Yoh0-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/r-architecture-TRCJ-87Yoh0-unsplash.jpg");
       }
 
       div:nth-child(4) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/roberto-nickson-tleCJiDOri0-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/roberto-nickson-tleCJiDOri0-unsplash.jpg");
       }
 
       div:nth-child(5) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/sidekix-media-t294_ZZP2pg-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/sidekix-media-t294_ZZP2pg-unsplash.jpg");
       }
 
       div:nth-child(6) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-9M66C_w_ToM-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/spacejoy-9M66C_w_ToM-unsplash.jpg");
       }
 
       div:nth-child(7) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/spacejoy-PyeXkOVmG1Y-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/spacejoy-PyeXkOVmG1Y-unsplash.jpg");
       }
 
       div:nth-child(8) {
-        background-image: url("/modul-2/MyProject/src/img/gorisont/toa-heftiba-FV3GConVSss-unsplash.jpg");
+        background-image: url("/modul-2/zuhause/src/img/gorisont/toa-heftiba-FV3GConVSss-unsplash.jpg");
       }
     }
 
@@ -258,7 +257,7 @@ body {
 // footer
   footer {
     grid-area: footer;
-    background-image: url('#{$nav-img-path}');
+    background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
