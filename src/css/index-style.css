@@ -137,7 +137,7 @@ body main h2 {
 body main p {
   line-height: 1.75em;
   color: #004b23;
-  margin-bottom: 0.5em;
+  margin-bottom: 2.5em;
 }
 body aside {
   grid-area: aside;
