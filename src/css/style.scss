@@ -17,14 +17,18 @@ body {
   nav {
     grid-area: navig;
     height: 10%;
-    background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
-    background-size: cover;
+    // background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    // background-size: cover;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+
+    // img {
+    //   background-size: cover;
+    // }
 
     #burger {
       display: none;
