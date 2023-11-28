@@ -17,8 +17,8 @@ body {
   nav {
     grid-area: navig;
     height: 10%;
-    // background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
-    // background-size: cover;
+    background-image: url("./src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    background-size: cover;
     display: flex;
     align-items: center;
     position: fixed;
@@ -26,8 +26,8 @@ body {
     left: 0;
     right: 0;
 
-    // img {
-    //   background-size: cover;
+    // nav img {
+    //   width: 200px;
     // }
 
     #burger {
@@ -249,19 +249,18 @@ body {
       37.5%{
           opacity: 0;
       }
-  }
+    }
   @keyframes zoom {
       50%{
           transform: scale(1.5);
       }    
-  }
-
+    }
   }
 
 // footer
   footer {
     grid-area: footer;
-    background-image: url("/modul-2/zuhause/src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
+    background-image: url("./src/img/anton-darius-wRMvOZ1CufQ-unsplash.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
