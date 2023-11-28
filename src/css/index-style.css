@@ -129,7 +129,6 @@ body header div:nth-child(8) {
 }
 body main {
   grid-area: main;
-  padding: 2.5em;
 }
 body main h2 {
   margin: 0.5em 0;
