@@ -129,6 +129,7 @@ body header div:nth-child(8) {
 }
 body main {
   grid-area: main;
+  padding: 2.5em;
 }
 body main h2 {
   margin: 0.5em 0;
@@ -137,7 +138,7 @@ body main h2 {
 body main p {
   line-height: 1.75em;
   color: #004b23;
-  margin-bottom: 2.5em;
+  margin-bottom: 0.5em;
 }
 body aside {
   grid-area: aside;
